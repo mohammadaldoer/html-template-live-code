@@ -13,6 +13,13 @@
     font-size: 1.3rem;
     margin-right:30px ;
 }
+.jumbotron::before{
+    content: "";
+  position: absolute;
+  width: 98.5%;
+  height: inherit;
+  background-color: rgba(83, 70, 70, 0.607); 
+}
 .jumbotron{
     display: flex;
     justify-content: center;
@@ -27,6 +34,8 @@
     color: #fff;
     font-weight: 900;
     font-size: 4rem;
+    position: relative;
+    z-index: 1; 
 }
 
 .jumbotron .btn-main{
@@ -37,12 +46,24 @@
     text-decoration: none;
     display: table;
     margin: 0 auto;
+    position: relative;
+
+    z-index: 1; 
+
 }
 .heading{
     width: 100%;
+    height: 8rem;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
 }
 .services{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 3fr;
+}
+.services{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
 }
